@@ -1,0 +1,16 @@
+{
+  "name": "virtual-ocpp-j-mock-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3004"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "json-server": "^0.16.1"
+  }
+}
