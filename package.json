@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 3004"
+    "start": "json-server --watch db.json --port 3004",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
-    "json-server": "^0.16.1"
+    "faker": "^5.1.0",
+    "json-server": "^0.16.1",
+    "nodemon": "^2.0.4"
   }
 }
