@@ -45,6 +45,10 @@ server.post("/station/operations/:action", (req, res) => {
       request = `[2,"4","StopTransaction",{"timestamp":"2020-09-25T10:10:26Z","transactionId":${req.body.transactionId},"meterStop":260000,"idTag":"B5C99702","reason":"Local","transactionData":[{"timestamp":"2020-06-25T10:10:36Z","sampledValue":[{"value":"100.000","context":"Transaction.Begin","unit":"kWh"}]},{"timestamp":"2020-06-25T10:10:26Z","sampledValue":[{"value":"105.000","context":"Transaction.End","unit":"kWh"}]}]}]`;
       response = `[3,"4",{"idTagInfo":{"status":"Accepted","expiryDate":"2020-10-09T14:48:27Z"}}]`;
       break;
+    case "statusnotification":
+      request = `[2,"5110","StatusNotification",{"connectorId":2,"errorCode":"${req.body.errorCode}","status":"${req.body.status}"}]`;
+      response = `[3,"5110",{}]`;
+      break;
     default:
       status = "Not supported";
       request = "";
